@@ -1,6 +1,6 @@
-// interface TodoTypes {
-//     id: number,
-//     text: string,
-//     completed: boolean;
-// }
-// export default TodoTypes;
+interface TodoTypes {
+    id: number,
+    text: string,
+    completed: boolean;
+}
+export default TodoTypes;
