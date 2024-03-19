@@ -15,7 +15,16 @@ const TodoList = () => {
         setEditedTodoText("");
     }
     const handleEditTodoSave = (id: number) =>{
-        
+        if(editedTodoText.trim() !== ""){
+          const updateTodo = TodoService.updateTodo({
+            id,
+            text: editedTodoText,
+            completed: false
+          });
+          setTodos((prev=> prev.map(todo=> todo.id === id? updateTodo: todo)));
+          setEditedTodoId(null);
+          setEditedTodoText("");
+        }
     }
   return (
     <div>
