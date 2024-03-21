@@ -5,7 +5,7 @@ import { FaCheck, FaEdit } from 'react-icons/fa';
 import { GiCancel} from 'react-icons/gi';
 import { RiDeleteBin5Fill } from 'react-icons/ri';
 import TodoForm from './TodoForm';
-
+import "../CSS/TodoList.css"
 const TodoList: React.FC  = () => {
     const [todos, setTodos] = useState<TodoTypes[]>(TodoService.getTodos());
     const [editedTodoId, setEditedTodoId] = useState<number|null>(null);
@@ -43,7 +43,7 @@ const TodoList: React.FC  = () => {
         {todos.map(todo => (
           <div className="items" key={todo.id}>
             {editedTodoId == todo.id? (
-              <div className="editedText">
+              <div className="editText">
                 <input type="text" value={editedTodoText} onChange={e => setEditedTodoText(e.target.value)} autoFocus={true} />
                 <button onClick={() => handleEditTodoSave(todo.id)}>
                   <FaCheck/>
@@ -56,7 +56,7 @@ const TodoList: React.FC  = () => {
               <div className="editBtn">
                 <span>{todo.text}</span>
                 <button onClick={()=> handleEditStart(todo.id, todo.text)}>
-                  <FaEdit />
+                  <span className="ebtn"><FaEdit /></span>
                 </button>
               </div>
             )}

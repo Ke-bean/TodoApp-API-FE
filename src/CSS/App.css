@@ -18,7 +18,6 @@
     border-radius: 10px;
     width: 100%;
     max-width: 900px;
-    /* Set the maximum width */
     margin: 0 auto;
 
 }
@@ -31,7 +30,6 @@
     display: flex;
     justify-content: center;
     padding: 10px;
-    border: 2px solid red;
     border-radius: 10px;
     position: static;
 }
@@ -48,7 +46,7 @@
     font-size: 1.5rem;
     margin: 0 10px;
     animation: spin 6s linear infinite;
-    color: greenyellow
+    color: rgb(160, 160, 149)
 }
 
 @keyframes spin {
